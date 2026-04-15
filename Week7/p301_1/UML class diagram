@@ -1,0 +1,14 @@
++----------------------+
+|        MyTime        |
++----------------------+
+| - hour : int         |
+| - min  : int         |
+| - sec  : int         |
+| - msec : int         |
++----------------------+
+| + convert(double)    |
+| + print()            |
+| + add(MyTime) : MyTime |
+| + reset()            |
+| + read()             |
++----------------------+
