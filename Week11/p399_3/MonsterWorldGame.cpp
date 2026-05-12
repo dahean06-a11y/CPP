@@ -1,0 +1,54 @@
+#include "MonsterWorld.hpp"
+#include <time.h>
+
+int main() {
+
+    srand((unsigned int)time(NULL));
+
+    int w = 16;
+    int h = 8;
+
+    MonsterWorld game(w, h);
+
+    Monster m(
+        "몬스터",
+        "※",
+        rand() % w,
+        rand() % h
+    );
+
+    game.add(m);
+
+    game.add(
+        Monster(
+            "도깨비",
+            "◎",
+            rand() % w,
+            rand() % h
+        )
+    );
+
+    game.add(
+        Monster(
+            "별그대",
+            "★",
+            rand() % w,
+            rand() % h
+        )
+    );
+
+    game.add(
+        Monster(
+            "고스트",
+            "♥",
+            rand() % w,
+            rand() % h
+        )
+    );
+
+    game.play(500, 100);
+
+    printf("------게임 종료-------------------\n");
+
+    return 0;
+}
